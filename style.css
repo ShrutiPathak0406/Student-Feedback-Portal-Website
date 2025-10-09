@@ -1,0 +1,181 @@
+/* ---------- Global ---------- */
+:root {
+  --primary: #0056b3;
+  --secondary: #0073e6;
+  --dark: #444;
+  --bg: #f3f6fc;
+  --white: #fff;
+  --radius: 10px;
+  --shadow: 0 4px 15px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  text-align: center;
+}
+
+/* ---------- Header ---------- */
+.navbar {
+    color: var(--white);
+    box-shadow: var(--shadow);
+    background: var(--primary);
+    padding: 1rem 0px;
+}
+.navbar h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.center-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.card h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.card .subtitle {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Buttons ---------- */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: var(--transition);
+}
+.btn.primary {
+  background: var(--primary);
+  color: var(--white);
+}
+.btn.primary:hover {
+  background: var(--secondary);
+}
+.btn.secondary {
+  background: #2a7ade;
+  color: var(--white);
+}
+.btn.secondary:hover {
+  background: #3693f0;
+}
+.btn.dark {
+  background: var(--dark);
+  color: var(--white);
+}
+.btn.dark:hover {
+  background: #666;
+}
+
+/* ---------- Forms ---------- */
+form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+label {
+  font-weight: 600;
+  text-align: center;
+}
+input, textarea, select {
+  padding: 0.3rem;           /* smaller padding to reduce size */
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  width: 80%;
+  width: 200px; 
+  margin: 0 auto;             /* set a smaller width */
+  box-sizing: border-box;    /* ensures padding doesn't increase overall width */
+  text-align: center;          /* ensures text starts from left */
+}
+
+button {
+  text-align: center;        /* aligns button to the left, change from center if needed */
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.4rem 1rem;          /* smaller padding to reduce size */
+  font-weight: 600;
+  font-size: 0.9rem;             /* smaller font size */
+  cursor: pointer;
+  transition: var(--transition);
+  width: 200px;
+  margin: 0 auto;
+}
+
+button:hover {
+  background: var(--secondary);
+}
+
+
+/* ---------- Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+th {
+  background: var(--primary);
+  color: var(--white);
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  background: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Animations ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.6s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
